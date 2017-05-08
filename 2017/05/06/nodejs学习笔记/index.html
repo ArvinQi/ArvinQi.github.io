@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>nodejs学习笔记 | Arvin Qi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="14年开始接触web开发，刚开始对web也只是好奇，满满的深入了解之后，选择前端作为方向，一步步前进。接触到nodejs的时候，感觉自己仿佛掉进了兔子洞，一脸茫然。到如今，对nodejs的应用让我在前端开发中得心应手，这真的要感谢nodejs的诞生了（作者 瑞安·达尔（Ryan Dahl））。这里也把目前自己多nodejs的应用做一个总结，希望对你有所帮助。">
+  <meta name="description" content="14年开始接触web开发，刚开始对web也只是好奇，满满的深入了解之后，选择前端作为方向，一步步前进。接触到nodejs的时候，感觉自己仿佛掉进了兔子洞，一脸茫然。到如今，对nodejs的应用让我在前端开发中得心应手，这真的要感谢nodejs的诞生了（作者 瑞安·达尔（Ryan Dahl））。这里也把目前自己多nodejs的应用做一个总结，希望对你有所帮助。 准备要学习nodejs首先要安装运行环">
 <meta name="keywords" content="工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nodejs学习笔记">
 <meta property="og:url" content="http://yoursite.com/2017/05/06/nodejs学习笔记/index.html">
 <meta property="og:site_name" content="Arvin Qi">
-<meta property="og:description" content="14年开始接触web开发，刚开始对web也只是好奇，满满的深入了解之后，选择前端作为方向，一步步前进。接触到nodejs的时候，感觉自己仿佛掉进了兔子洞，一脸茫然。到如今，对nodejs的应用让我在前端开发中得心应手，这真的要感谢nodejs的诞生了（作者 瑞安·达尔（Ryan Dahl））。这里也把目前自己多nodejs的应用做一个总结，希望对你有所帮助。">
-<meta property="og:updated_time" content="2017-05-06T09:38:12.000Z">
+<meta property="og:description" content="14年开始接触web开发，刚开始对web也只是好奇，满满的深入了解之后，选择前端作为方向，一步步前进。接触到nodejs的时候，感觉自己仿佛掉进了兔子洞，一脸茫然。到如今，对nodejs的应用让我在前端开发中得心应手，这真的要感谢nodejs的诞生了（作者 瑞安·达尔（Ryan Dahl））。这里也把目前自己多nodejs的应用做一个总结，希望对你有所帮助。 准备要学习nodejs首先要安装运行环">
+<meta property="og:updated_time" content="2017-05-08T05:46:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodejs学习笔记">
-<meta name="twitter:description" content="14年开始接触web开发，刚开始对web也只是好奇，满满的深入了解之后，选择前端作为方向，一步步前进。接触到nodejs的时候，感觉自己仿佛掉进了兔子洞，一脸茫然。到如今，对nodejs的应用让我在前端开发中得心应手，这真的要感谢nodejs的诞生了（作者 瑞安·达尔（Ryan Dahl））。这里也把目前自己多nodejs的应用做一个总结，希望对你有所帮助。">
+<meta name="twitter:description" content="14年开始接触web开发，刚开始对web也只是好奇，满满的深入了解之后，选择前端作为方向，一步步前进。接触到nodejs的时候，感觉自己仿佛掉进了兔子洞，一脸茫然。到如今，对nodejs的应用让我在前端开发中得心应手，这真的要感谢nodejs的诞生了（作者 瑞安·达尔（Ryan Dahl））。这里也把目前自己多nodejs的应用做一个总结，希望对你有所帮助。 准备要学习nodejs首先要安装运行环">
   
     <link rel="alternative" href="/atom.xml" title="Arvin Qi" type="application/atom+xml">
   
@@ -52,6 +52,8 @@
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Arvin Qi</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">arvin.qjl@outlook.com</p>
 		
 
 		<nav class="header-menu">
@@ -106,6 +108,8 @@
 			<hgroup>
 			  <h1 class="header-author js-header-author">Arvin Qi</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>arvin.qjl@outlook.com<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -171,30 +175,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>14年开始接触web开发，刚开始对web也只是好奇，满满的深入了解之后，选择前端作为方向，一步步前进。接触到nodejs的时候，感觉自己仿佛掉进了兔子洞，一脸茫然。到如今，对nodejs的应用让我在前端开发中得心应手，这真的要感谢nodejs的诞生了（作者 瑞安·达尔（Ryan Dahl））。这里也把目前自己多nodejs的应用做一个总结，希望对你有所帮助。</p>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>要学习nodejs首先要安装运行环境，建议直接用<a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a>（一个node版本管理工具）来安装node环境。总体来说，环境什么的还好配置。</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>首先说明一下，我并没有使用express或者koa去开发后台，只是用他们来实现了一个开发服务器，实时构建刷新浏览器。目前主要用途就是结合webpack搭建开发环境和前端依赖包的管理（现在用的yarn来替代npm）。</p>
+<p>开发react时接触到了npm的包管理，也得益于模块化的兴起，确实很方便，只不过npm对依赖的管理不是很好，经常出现，不同包引入不同版本的react，这种问题很难查找，后来就采用yarn来管理包了，yarn能很好的管理包之间的相互依赖关系，即使出了问题需要删除所有重新安装也只是yarn upgrade 就可以了</p>
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>👍<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -310,7 +296,7 @@
     		&copy; 2017 Arvin Qi
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<!--<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten-->
       	</div>
     </div>
   </div>
@@ -383,10 +369,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Arvin's blog</a>
-              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
