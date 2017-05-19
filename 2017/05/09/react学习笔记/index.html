@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>nodejs学习笔记 | Arvin Qi</title>
+  <title>react学习笔记 | Arvin Qi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="14年开始接触web开发，刚开始对web也只是好奇，满满的深入了解之后，选择前端作为方向，一步步前进。接触到nodejs的时候，感觉自己仿佛掉进了兔子洞，一脸茫然。到如今，对nodejs的应用让我在前端开发中得心应手，这真的要感谢nodejs的诞生了（作者 瑞安·达尔（Ryan Dahl））。这里也把目前自己多nodejs的应用做一个总结，希望对你有所帮助。 准备要学习nodejs首先要安装运行环">
-<meta name="keywords" content="工具">
+  <meta name="description" content="接触react之前，主要接触的是传统的web开发，也尝试了Angular。虽然Angular的双向绑定给我提供了很大的便利，但也带来了诸多问题。Redux提供的一个单项数据流，确实解决了很多问题，不会让变化无路可循，调试也方便了很多，特别是时间漫游功能能让你跨越时间去观察那里不对，即时是稍纵即逝的变化也能完美的还原。React的变成理念跟传统理念区别确实很大，刚开始的确需要适应。特别是模块的理念，">
+<meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nodejs学习笔记">
-<meta property="og:url" content="http://yoursite.com/2017/05/06/nodejs学习笔记/index.html">
+<meta property="og:title" content="react学习笔记">
+<meta property="og:url" content="http://yoursite.com/2017/05/09/react学习笔记/index.html">
 <meta property="og:site_name" content="Arvin Qi">
-<meta property="og:description" content="14年开始接触web开发，刚开始对web也只是好奇，满满的深入了解之后，选择前端作为方向，一步步前进。接触到nodejs的时候，感觉自己仿佛掉进了兔子洞，一脸茫然。到如今，对nodejs的应用让我在前端开发中得心应手，这真的要感谢nodejs的诞生了（作者 瑞安·达尔（Ryan Dahl））。这里也把目前自己多nodejs的应用做一个总结，希望对你有所帮助。 准备要学习nodejs首先要安装运行环">
-<meta property="og:updated_time" content="2017-05-08T05:46:56.000Z">
+<meta property="og:description" content="接触react之前，主要接触的是传统的web开发，也尝试了Angular。虽然Angular的双向绑定给我提供了很大的便利，但也带来了诸多问题。Redux提供的一个单项数据流，确实解决了很多问题，不会让变化无路可循，调试也方便了很多，特别是时间漫游功能能让你跨越时间去观察那里不对，即时是稍纵即逝的变化也能完美的还原。React的变成理念跟传统理念区别确实很大，刚开始的确需要适应。特别是模块的理念，">
+<meta property="og:updated_time" content="2017-05-19T06:54:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nodejs学习笔记">
-<meta name="twitter:description" content="14年开始接触web开发，刚开始对web也只是好奇，满满的深入了解之后，选择前端作为方向，一步步前进。接触到nodejs的时候，感觉自己仿佛掉进了兔子洞，一脸茫然。到如今，对nodejs的应用让我在前端开发中得心应手，这真的要感谢nodejs的诞生了（作者 瑞安·达尔（Ryan Dahl））。这里也把目前自己多nodejs的应用做一个总结，希望对你有所帮助。 准备要学习nodejs首先要安装运行环">
+<meta name="twitter:title" content="react学习笔记">
+<meta name="twitter:description" content="接触react之前，主要接触的是传统的web开发，也尝试了Angular。虽然Angular的双向绑定给我提供了很大的便利，但也带来了诸多问题。Redux提供的一个单项数据流，确实解决了很多问题，不会让变化无路可循，调试也方便了很多，特别是时间漫游功能能让你跨越时间去观察那里不对，即时是稍纵即逝的变化也能完美的还原。React的变成理念跟传统理念区别确实很大，刚开始的确需要适应。特别是模块的理念，">
   
     <link rel="alternative" href="/atom.xml" title="Arvin Qi" type="application/atom+xml">
   
@@ -154,30 +154,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-nodejs学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-react学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      nodejs学习笔记
+      react学习笔记
     </h1>
   
 
         
-        <a href="/2017/05/06/nodejs学习笔记/" class="archive-article-date">
-  	<time datetime="2017-05-06T09:26:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-06</time>
+        <a href="/2017/05/09/react学习笔记/" class="archive-article-date">
+  	<time datetime="2017-05-09T02:35:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>14年开始接触web开发，刚开始对web也只是好奇，满满的深入了解之后，选择前端作为方向，一步步前进。接触到nodejs的时候，感觉自己仿佛掉进了兔子洞，一脸茫然。到如今，对nodejs的应用让我在前端开发中得心应手，这真的要感谢nodejs的诞生了（作者 瑞安·达尔（Ryan Dahl））。这里也把目前自己多nodejs的应用做一个总结，希望对你有所帮助。</p>
-<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>要学习nodejs首先要安装运行环境，建议直接用<a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a>（一个node版本管理工具）来安装node环境。总体来说，环境什么的还好配置。</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>首先说明一下，我并没有使用express或者koa去开发后台，只是用他们来实现了一个开发服务器，实时构建刷新浏览器。目前主要用途就是结合webpack搭建开发环境和前端依赖包的管理（现在用的yarn来替代npm）。</p>
-<p>开发react时接触到了npm的包管理，也得益于模块化的兴起，确实很方便，只不过npm对依赖的管理不是很好，经常出现，不同包引入不同版本的react，这种问题很难查找，后来就采用yarn来管理包了，yarn能很好的管理包之间的相互依赖关系，即使出了问题需要删除所有重新安装也只是yarn upgrade 就可以了</p>
+        <p>接触react之前，主要接触的是传统的web开发，也尝试了Angular。虽然Angular的双向绑定给我提供了很大的便利，但也带来了诸多问题。Redux提供的一个单项数据流，确实解决了很多问题，不会让变化无路可循，调试也方便了很多，特别是时间漫游功能能让你跨越时间去观察那里不对，即时是稍纵即逝的变化也能完美的还原。React的变成理念跟传统理念区别确实很大，刚开始的确需要适应。特别是模块的理念，以前用requirejs来实现模块化，react采用webpack来提供的模块化规范，只要配置好就不需要关注太多构建的问题，只要专心写模块的代码就好了。不过模块化的尺度开始很难把握，模块最小要写到什么程度。后面会一一讲解，学习中遇到的问题以及一些小小的经验。</p>
+<h3 id="首先-基础知识"><a href="#首先-基础知识" class="headerlink" title="首先-基础知识"></a>首先-基础知识</h3><p>要想开始一个项目，感觉还是要从观念上开始转变。react提倡组件化的开发理念，把能复用的部分抽象出来，以提高开发速度。简单的单页应用没必要引入状态管理，直接用react就可以了。倘若状态过于复杂或者项目后期会做的很大，那就有必要引入状态管理了，比如redux，flux等。</p>
+<p>另外一个重要的概念可能就是函数式编程（这个我的了解也不是很深入，不多说）了，总的来说组建都是无状态的，以来于唯一的store来管理项目所有的状态。</p>
+<p>去<a href="https://facebook.github.io/react/" target="_blank" rel="external">React</a>开一看，然后下个demo研读一下代码能帮助更快的了解react的开发理念。</p>
+<h3 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h3><p>最开始想自己用webpack搭建一个构建环境，自己写总是要不断完善，前期改动量太大（反复修改以前的代码），不利于敏捷开发。后来选择用redux-cli来帮我们完成项目基础架构的搭建，然后在这个基础上根据项目情况逐步完善。</p>
+<p>首先，基础框架加入了<a href="https://react-bootstrap.github.io/" target="_blank" rel="external">react-bootstrap</a>, <a href="https://ant.design/" target="_blank" rel="external">antd</a>，图标使用的是<a href="http://iconfont.cn/" target="_blank" rel="external">iconfont</a>，</p>
+<p>然后，我们需要前后台layout不一样，于是根据路由调用不同的模版来实现了（感觉这里不是很好，把layout碎片化去掉用可能会好点），然后后台模版引入了一个主题框架（这应该是最大的败笔了，因为这个框架依赖于jquery，而且不符合react的单向数据流的理念），既然不是什么好事情就不详细描述了。</p>
+<p><strong>API请求</strong> 我们后台要求<a href="http://jsonapi.org/implementations/" target="_blank" rel="external">json-api</a>，于是采用了redux-json-api来实现，当然这个也有弊端，如果让我再次选择的话，我宁愿选择axios，因为redux-json-api依赖于redux，所以没法脱离框架去使用。然后把模块本身的请求都写到了相应的模块里，这样也不好，最好是把所有请求都写在一起，这样便于管理。</p>
+<p><strong>Form表单验证</strong> 基本上每个项目都会涉及到，开始我们使用了<a href="https://github.com/christianalfoni/formsy-react" target="_blank" rel="external">formsy-react</a>，后来发现跟redux不能很好的结合在一起，就换成了<a href="http://redux-form.com/6.0.2/" target="_blank" rel="external">redux-form</a> ，这个选择是正确的，redux-form 提供了完善的表单验证方案，它也使我们能够把每一个输入控件抽象出来进行自定义，这样既保证了统一性，又能提升开发效率。</p>
+<h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>这差不多就是我的react踩坑之旅了吧，自己挖坑自己填，做一个有思想的程序员。</p>
 
       
 
@@ -186,17 +192,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -247,7 +242,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/06/nodejs学习笔记/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/09/react学习笔记/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -261,20 +256,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/05/04/vue学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/06/nodejs学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          vue学习笔记
+          nodejs学习笔记
         
       </div>
     </a>
   
-  
-    <a href="/2017/05/09/react学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">react学习笔记</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
