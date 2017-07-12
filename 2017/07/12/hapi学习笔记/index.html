@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Arvin Qi</title>
+  <title>hapi学习笔记 | Arvin Qi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/hello-world.html">
+  <meta name="description" content="说起这个框架也是因为要做D O，本来打算采用koa来实现的，后来发现了这个hapi(happy读音)更易上手，而且基本都是通过配置对象即可完成后台开发，数据库就采用了nosql的mongodb。">
+<meta name="keywords" content="框架,hapi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hapi学习笔记">
+<meta property="og:url" content="http://yoursite.com/2017/07/12/hapi学习笔记/index.html">
 <meta property="og:site_name" content="Arvin Qi">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-05-06T07:54:45.000Z">
+<meta property="og:description" content="说起这个框架也是因为要做D O，本来打算采用koa来实现的，后来发现了这个hapi(happy读音)更易上手，而且基本都是通过配置对象即可完成后台开发，数据库就采用了nosql的mongodb。">
+<meta property="og:updated_time" content="2017-07-12T07:11:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="hapi学习笔记">
+<meta name="twitter:description" content="说起这个框架也是因为要做D O，本来打算采用koa来实现的，后来发现了这个hapi(happy读音)更易上手，而且基本都是通过配置对象即可完成后台开发，数据库就采用了nosql的mongodb。">
   
     <link rel="alternative" href="/atom.xml" title="Arvin Qi" type="application/atom+xml">
   
@@ -149,35 +150,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-undefined" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-hapi学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      hapi学习笔记
     </h1>
   
 
         
-        <a href="/hello-world.html" class="archive-article-date">
-  	<time datetime="2017-05-06T07:54:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-06</time>
+        <a href="/2017/07/12/hapi学习笔记/" class="archive-article-date">
+  	<time datetime="2017-07-12T06:59:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>说起这个框架也是因为要做D O，本来打算采用koa来实现的，后来发现了这个hapi(happy读音)更易上手，而且基本都是通过配置对象即可完成后台开发，数据库就采用了nosql的mongodb。<br><a id="more"></a></p>
+<h3 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h3><p>既然不是工具，安装就很简单了，采用yarn add hapi就可以在项目里使用了。推荐使用vscode调试开发，很是方便。</p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>官网上提供了很多现成的框架。我是结合了hapi-api和hapi-struct两个框架，实现的D O的框架，然后加入了mongoose实现连接mongodb，整体来说也没有什么太大的难度吧<br>登录注册都是hapi-struct提供的api代码，只不过我把他们集成到hapi-api里面了，然后自己实现了task模块，email使用了阿里的服务</p>
+<h3 id="End"><a href="#End" class="headerlink" title="End"></a>End</h3><p>整体开发体验不错，目前就写这么多吧，后面会持续更新的。</p>
 
       
 
@@ -186,6 +182,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hapi</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -236,7 +247,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/hello-world.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/12/hapi学习笔记/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -248,6 +259,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/12/weex学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">weex学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 
 
@@ -281,7 +302,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

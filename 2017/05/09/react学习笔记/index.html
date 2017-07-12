@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/09/react学习笔记/index.html">
 <meta property="og:site_name" content="Arvin Qi">
 <meta property="og:description" content="接触react之前，主要接触的是传统的web开发，也尝试了Angular。虽然Angular的双向绑定给我提供了很大的便利，但也带来了诸多问题。Redux提供的一个单项数据流，确实解决了很多问题，不会让变化无路可循，调试也方便了很多，特别是时间漫游功能能让你跨越时间去观察那里不对，即时是稍纵即逝的变化也能完美的还原。React的变成理念跟传统理念区别确实很大，刚开始的确需要适应。特别是模块的理念，">
-<meta property="og:updated_time" content="2017-06-10T04:55:38.000Z">
+<meta property="og:updated_time" content="2017-07-12T06:55:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react学习笔记">
 <meta name="twitter:description" content="接触react之前，主要接触的是传统的web开发，也尝试了Angular。虽然Angular的双向绑定给我提供了很大的便利，但也带来了诸多问题。Redux提供的一个单项数据流，确实解决了很多问题，不会让变化无路可循，调试也方便了很多，特别是时间漫游功能能让你跨越时间去观察那里不对，即时是稍纵即逝的变化也能完美的还原。React的变成理念跟传统理念区别确实很大，刚开始的确需要适应。特别是模块的理念，">
@@ -170,7 +170,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>接触react之前，主要接触的是传统的web开发，也尝试了Angular。虽然Angular的双向绑定给我提供了很大的便利，但也带来了诸多问题。Redux提供的一个单项数据流，确实解决了很多问题，不会让变化无路可循，调试也方便了很多，特别是时间漫游功能能让你跨越时间去观察那里不对，即时是稍纵即逝的变化也能完美的还原。React的变成理念跟传统理念区别确实很大，刚开始的确需要适应。特别是模块的理念，以前用requirejs来实现模块化，react采用webpack来提供的模块化规范，只要配置好就不需要关注太多构建的问题，只要专心写模块的代码就好了。不过模块化的尺度开始很难把握，模块最小要写到什么程度。后面会一一讲解，学习中遇到的问题以及一些小小的经验。</p>
+        <p>接触react之前，主要接触的是传统的web开发，也尝试了Angular。虽然Angular的双向绑定给我提供了很大的便利，但也带来了诸多问题。Redux提供的一个单项数据流，确实解决了很多问题，不会让变化无路可循，调试也方便了很多，特别是时间漫游功能能让你跨越时间去观察那里不对，即时是稍纵即逝的变化也能完美的还原。React的变成理念跟传统理念区别确实很大，刚开始的确需要适应。特别是模块的理念，以前用requirejs来实现模块化，react采用webpack来提供的模块化规范，只要配置好就不需要关注太多构建的问题，只要专心写模块的代码就好了。不过模块化的尺度开始很难把握，模块最小要写到什么程度。后面会一一讲解，学习中遇到的问题以及一些小小的经验。<br><a id="more"></a></p>
 <h3 id="首先-基础知识"><a href="#首先-基础知识" class="headerlink" title="首先-基础知识"></a>首先-基础知识</h3><p>要想开始一个项目，感觉还是要从观念上开始转变。react提倡组件化的开发理念，把能复用的部分抽象出来，以提高开发速度。简单的单页应用没必要引入状态管理，直接用react就可以了。倘若状态过于复杂或者项目后期会做的很大，那就有必要引入状态管理了，比如redux，flux等。</p>
 <p>另外一个重要的概念可能就是函数式编程（这个我的了解也不是很深入，不多说）了，总的来说组建都是无状态的，以来于唯一的store来管理项目所有的状态。</p>
 <p>去<a href="https://facebook.github.io/react/" target="_blank" rel="external">React</a>开一看，然后下个demo研读一下代码能帮助更快的了解react的开发理念。</p>
@@ -386,15 +386,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+                <a href="javascript:void(0)" class="js-tag color5">hapi</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -406,7 +398,23 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">gulp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
              
               <li class="article-tag-list-item">
