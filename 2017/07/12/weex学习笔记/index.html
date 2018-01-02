@@ -172,8 +172,8 @@
       
         <p>weex是2016年中旬从alibaba团队开源出来的，现在已经能够采用vuejs来开发weex跨平台app。通过weex开发了一个基于艾森豪威尔识字法则的todolist(取名DO)，代码github上已经上传了，有兴趣的可以下载看一看。<br><a id="more"></a></p>
 <h3 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h3><p>安装前提是已经安装node =&gt; 6.0,然后安装weex的toolkit</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g weex-toolkit</div></pre></td></tr></table></figure>
-<p>这里如果想要做跨平台的app就需要使用了create创建weexpack项目而不是通过init创建vue项目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ weex create new-project</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g weex-toolkit</span><br></pre></td></tr></table></figure>
+<p>这里如果想要做跨平台的app就需要使用了create创建weexpack项目而不是通过init创建vue项目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ weex create new-project</span><br></pre></td></tr></table></figure></p>
 <p>ios app需要mac环境并且安装xcode并安装ios开发环境和cocoapods<br>android app需要jdk &gt;=1.7和android sdk推荐安装Android studio<br>通过weex-toolkit添加platform，就可以build项目，不过最好还是用xcode和android studio来调试，weex自带的调试似乎并不好用。</p>
 <h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>基础知识就是vue全家桶，结合weex官方提供的语法结构。</p>
 <p>这里提一下，weex的语法并不是完全符合web规范的，比如没有select标签，只能使用官方手册提供的标签，样式css也有限制，比如padding，margin，border不支持缩写，background设置颜色值无效等，必须background-color才可以。</p>
@@ -304,7 +304,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Arvin Qi
+    		&copy; 2018 Arvin Qi
     	</div>
       	<div class="footer-right">
       		<!--<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten-->
@@ -386,23 +386,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hapi</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">angular1.0</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">angular</a>
+                <a href="javascript:void(0)" class="js-tag color2">nuxtjs</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -414,7 +406,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color1">angular1.0</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">angular</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hapi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -422,7 +426,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
             <div class="clearfix"></div>

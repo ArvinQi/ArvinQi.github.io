@@ -9,7 +9,7 @@
   <title>vue学习笔记 | Arvin Qi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="本身也是一个新手，做个学习笔记巩固下知识，希望也能帮助到同样在学习Vue的你。">
-<meta name="keywords" content="框架,vue2.0,vue">
+<meta name="keywords" content="框架,vue,vue2.0">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue学习笔记">
 <meta property="og:url" content="http://yoursite.com/2017/05/04/vue学习笔记/index.html">
@@ -171,10 +171,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本身也是一个新手，做个学习笔记巩固下知识，希望也能帮助到同样在学习Vue的你。<br><a id="more"></a></p>
-<h3 id="首先-怎么开始"><a href="#首先-怎么开始" class="headerlink" title="首先-怎么开始"></a>首先-怎么开始</h3><p>要学习一个新的框架首先肯定是从官方文档（<a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="external">https://cn.vuejs.org/v2/guide/</a>)了解它,我只看了基础的部分，感觉用不到看了也会忘，等用到的时候再说吧。说实话，刚看完文档有点晕晕乎乎，毕竟纯理论的东西。于是在<a href="http://codepen.io/" target="_blank" rel="external">codepen</a>上写一些基础代码，实践是最好的老师，从代码里感受Vue的具体表现。可能是之前有React和Angular的经验，接受起Vue的代码书写方式比较容易，很多概念也比较好理解。说实话，总体感觉Vue就是做的很好，让用的人可以很傻瓜的用，这一点是React和Angular比不了的。</p>
-<h3 id="练手-TodoMVC"><a href="#练手-TodoMVC" class="headerlink" title="练手-TodoMVC"></a>练手-TodoMVC</h3><p>想要学习一个框架肯定要有Demo做出来才能去应用到实践中吧，因为之前Redux-cli开发项目所以对node和webpack也有一定的了解，所以直接用了Vue的Vue-cli来开发。<br>这是官方提供的脚本(yarn处理依赖比较好，所以也可以用它来安装）：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 全局安装 vue-cli</span></div><div class="line">$ npm install --global vue-cli</div><div class="line"><span class="comment"># 创建一个基于 webpack 模板的新项目</span></div><div class="line">$ vue init webpack my-project</div><div class="line"><span class="comment"># 安装依赖</span></div><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line">$ npm install</div><div class="line">$ npm run dev</div></pre></td></tr></table></figure></p>
-<p>TodoMVC的样式也有个项目可以调用github上这个项目<a href="https://github.com/tastejs/todomvc-app-css" target="_blank" rel="external">todomvc-app-css</a>，这样只要关注Vue就好了。<br>build目录下webpack.base.conf.js的配置需要改下,extensions添加’.less’, ‘.css’, ‘.scss’，具体细节就不再描述了。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">resolve: &#123;</div><div class="line">    <span class="attr">extensions</span>: [<span class="string">''</span>, <span class="string">'.js'</span>, <span class="string">'.vue'</span>, <span class="string">'.json'</span>, <span class="string">'.less'</span>, <span class="string">'.css'</span>, <span class="string">'.scss'</span>],</div><div class="line">    <span class="attr">alias</span>: &#123;</div><div class="line">      <span class="string">'vue$'</span>: <span class="string">'vue/dist/vue.esm.js'</span>,</div><div class="line">      <span class="string">'@'</span>: resolve(<span class="string">'src'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;,</div></pre></td></tr></table></figure></p>
-<h3 id="实践-项目开发"><a href="#实践-项目开发" class="headerlink" title="实践-项目开发"></a>实践-项目开发</h3><p>近期刚好要做一个移动端的项目，实践是最好的学习。毕竟刚开始使用Vue框架，构建上并不轻车熟路，所以项目起始框架借鉴了项目<a href="https://github.com/bailicangdu/vue2-elm" target="_blank" rel="external">elm-vue2</a>（这里也要感谢作者bailicangdu的慷慨）。然后项目的UI Kit用的是饿了吗的前端<a href="http://element.eleme.io/#/zh-CN" target="_blank" rel="external">Element</a>。使用开始会遇到各种各样的问题，去github上找issue基本上是最快的办法了吧。然后API方便并没有使用Vue-source（当然，作者也不推荐），而是采用的axios来实现API的调用，所以也推荐使用axios。这里说一个小经历吧：有个头像上传的需求，后台需要post提交formData数据，前台把FormData数据配好以后提交的时候发现axios.post并没有把我的FormData携带过去，请求的payload一直为空。找了好久终于发现是这段代码的错误：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">axios.interceptors.request.use(<span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">if</span> (config.data <span class="keyword">instanceof</span> FormData) &#123;</div><div class="line">    </div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    config.data = qs.stringify(config.data);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> config;</div><div class="line">&#125;, (error) =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"错误的传参"</span>, error);</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="首先-怎么开始"><a href="#首先-怎么开始" class="headerlink" title="首先-怎么开始"></a>首先-怎么开始</h3><p>要学习一个新的框架首先肯定是从官方文档（<a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener">https://cn.vuejs.org/v2/guide/</a>)了解它,我只看了基础的部分，感觉用不到看了也会忘，等用到的时候再说吧。说实话，刚看完文档有点晕晕乎乎，毕竟纯理论的东西。于是在<a href="http://codepen.io/" target="_blank" rel="noopener">codepen</a>上写一些基础代码，实践是最好的老师，从代码里感受Vue的具体表现。可能是之前有React和Angular的经验，接受起Vue的代码书写方式比较容易，很多概念也比较好理解。说实话，总体感觉Vue就是做的很好，让用的人可以很傻瓜的用，这一点是React和Angular比不了的。</p>
+<h3 id="练手-TodoMVC"><a href="#练手-TodoMVC" class="headerlink" title="练手-TodoMVC"></a>练手-TodoMVC</h3><p>想要学习一个框架肯定要有Demo做出来才能去应用到实践中吧，因为之前Redux-cli开发项目所以对node和webpack也有一定的了解，所以直接用了Vue的Vue-cli来开发。<br>这是官方提供的脚本(yarn处理依赖比较好，所以也可以用它来安装）：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局安装 vue-cli</span></span><br><span class="line">$ npm install --global vue-cli</span><br><span class="line"><span class="comment"># 创建一个基于 webpack 模板的新项目</span></span><br><span class="line">$ vue init webpack my-project</span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">$ <span class="built_in">cd</span> my-project</span><br><span class="line">$ npm install</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure></p>
+<p>TodoMVC的样式也有个项目可以调用github上这个项目<a href="https://github.com/tastejs/todomvc-app-css" target="_blank" rel="noopener">todomvc-app-css</a>，这样只要关注Vue就好了。<br>build目录下webpack.base.conf.js的配置需要改下,extensions添加’.less’, ‘.css’, ‘.scss’，具体细节就不再描述了。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">    extensions: [<span class="string">''</span>, <span class="string">'.js'</span>, <span class="string">'.vue'</span>, <span class="string">'.json'</span>, <span class="string">'.less'</span>, <span class="string">'.css'</span>, <span class="string">'.scss'</span>],</span><br><span class="line">    alias: &#123;</span><br><span class="line">      <span class="string">'vue$'</span>: <span class="string">'vue/dist/vue.esm.js'</span>,</span><br><span class="line">      <span class="string">'@'</span>: resolve(<span class="string">'src'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure></p>
+<h3 id="实践-项目开发"><a href="#实践-项目开发" class="headerlink" title="实践-项目开发"></a>实践-项目开发</h3><p>近期刚好要做一个移动端的项目，实践是最好的学习。毕竟刚开始使用Vue框架，构建上并不轻车熟路，所以项目起始框架借鉴了项目<a href="https://github.com/bailicangdu/vue2-elm" target="_blank" rel="noopener">elm-vue2</a>（这里也要感谢作者bailicangdu的慷慨）。然后项目的UI Kit用的是饿了吗的前端<a href="http://element.eleme.io/#/zh-CN" target="_blank" rel="noopener">Element</a>。使用开始会遇到各种各样的问题，去github上找issue基本上是最快的办法了吧。然后API方便并没有使用Vue-source（当然，作者也不推荐），而是采用的axios来实现API的调用，所以也推荐使用axios。这里说一个小经历吧：有个头像上传的需求，后台需要post提交formData数据，前台把FormData数据配好以后提交的时候发现axios.post并没有把我的FormData携带过去，请求的payload一直为空。找了好久终于发现是这段代码的错误：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">axios.interceptors.request.use(<span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (config.data <span class="keyword">instanceof</span> FormData) &#123;</span><br><span class="line">    </span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    config.data = qs.stringify(config.data);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> config;</span><br><span class="line">&#125;, (error) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"错误的传参"</span>, error);</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>axios支持对请求参数进行序列化，而FormData进行序列化以后是空的（因为对象本来就是空的），所以这里当遇到FormData对象的时候不做序列化就不会出现参数丢失的问题。</p>
 <h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>这就是我目前学习Vue的一点点经验了，希望能够对你有所帮助。</p>
 
@@ -194,11 +194,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vue2.0</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vue2.0</a>
         		</li>
       		
 		</ul>
@@ -300,7 +300,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Arvin Qi
+    		&copy; 2018 Arvin Qi
     	</div>
       	<div class="footer-right">
       		<!--<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten-->
@@ -382,23 +382,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hapi</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">angular1.0</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">angular</a>
+                <a href="javascript:void(0)" class="js-tag color2">nuxtjs</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -410,7 +402,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color1">angular1.0</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">angular</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hapi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">gulp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -418,7 +422,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
             <div class="clearfix"></div>
